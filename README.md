@@ -1,4 +1,4 @@
-# shopping cart Bundle
+# catalog merging product Bundle
 A nodejs application for coding skills challenge of catalog merging 
 
 ## Requirements

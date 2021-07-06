@@ -1,4 +1,6 @@
 const util = require('../src/util/file'),
+      catalogRepository = require('../src/repository/catalog-repository'),
+      barcodeRepository = require('../src/repository/barcode-repository'),
       chai  = require("chai"),
       expect = chai.expect;
 
@@ -27,5 +29,14 @@ describe('util', () => {
             });
         });
     });
+});    
 
+describe('catalogRepo', () => {
+    describe('getByCompany', () => {
+        it('getByCompany - should return a proper catalog name', () => {
+            catalogRepository.getByCompany('A').then((data)=>{
+                expect(data).that.contains('Twitterbridge');
+            })
+        });
+    });
 });    
